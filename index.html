@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naivest — Boutique Outfit</title>
+  <meta name="description" content="Naivest by Naifa Ghaisani — boutique outfit dengan gaya vintage-modern berwarna coklat & copper."/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" as="audio" href="assets/audio/ambient_soft.wav">
+</head>
+<body>
+  <audio id="bgm" src="assets/audio/ambient_soft.wav" loop></audio>
+
+  <header class="nav shadow">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <h1>Naivest</h1>
+      <small>by Naifa Ghaisani</small>
+    </div>
+    <nav>
+      <a href="#koleksi">Koleksi</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="actions">
+      <button class="btn ghost" id="audioToggle" aria-label="Toggle music">♫</button>
+      <button class="btn cart" id="openCart" aria-label="Buka keranjang">
+        Cart <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Slider / Hero -->
+  <section class="hero">
+    <div class="slider" id="slider">
+      <div class="slide"><img src="assets/images/hero_outfit.jpg" alt="Set blouse & skirt tekstur vintage"/></div>
+      <div class="slide"><img src="assets/images/sofa_set.jpg" alt="Set striped shirt dan wide pants"/></div>
+      <div class="slide"><img src="assets/images/coat_street.jpg" alt="Look mantel krem & trousers coklat"/></div>
+    </div>
+    <div class="hero-text">
+      <h2>Vintage tones. Modern silhouettes.</h2>
+      <p>Koleksi serba outfit dengan nuansa coklat tua, coklat muda, dan copper yang hangat.</p>
+      <a href="#koleksi" class="btn cta">Belanja Sekarang</a>
+    </div>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <!-- Koleksi -->
+  <section id="koleksi" class="section">
+    <h3 class="section-title">Koleksi Pilihan</h3>
+    <div class="grid">
+      <article class="card reveal">
+        <img src="assets/images/hero_outfit.jpg" alt="Knit Set Brown"/>
+        <div class="info">
+          <h4>Knit Set Brown</h4>
+          <p>Blouse + skirt tekstur embo warna brown vintage.</p>
+          <div class="price">
+            <span class="now">Rp239.000</span>
+            <span class="old">Rp299.000</span>
+          </div>
+          <button class="btn add" data-id="KS01" data-name="Knit Set Brown" data-price="239000" data-img="assets/images/hero_outfit.jpg">Tambah ke Cart</button>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <img src="assets/images/sofa_set.jpg" alt="Stripe Shirt Set Ivory"/>
+        <div class="info">
+          <h4>Stripe Shirt Set Ivory</h4>
+          <p>Kemeja garis & wide pants ivory — effortless chic.</p>
+          <div class="price">
+            <span class="now">Rp259.000</span>
+            <span class="old">Rp319.000</span>
+          </div>
+          <button class="btn add" data-id="SS02" data-name="Stripe Shirt Set Ivory" data-price="259000" data-img="assets/images/sofa_set.jpg">Tambah ke Cart</button>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <img src="assets/images/coat_street.jpg" alt="Creme Coat & Cocoa Trousers"/>
+        <div class="info">
+          <h4>Creme Coat & Cocoa Trousers</h4>
+          <p>Statement coat krem dengan trousers coklat — bold & warm.</p>
+          <div class="price">
+            <span class="now">Rp429.000</span>
+            <span class="old">Rp499.000</span>
+          </div>
+          <button class="btn add" data-id="CT03" data-name="Creme Coat & Cocoa Trousers" data-price="429000" data-img="assets/images/coat_street.jpg">Tambah ke Cart</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="section about">
+    <div class="about-box reveal">
+      <h3>Tentang Naivest</h3>
+      <p>Naivest adalah rumah bagi outfit pilihan bernuansa vintage yang terasa modern.
+      Didesain dan dikurasi langsung oleh <b>Naifa Ghaisani</b>, kami mengejar kualitas bahan, cutting, dan tone warna yang timeless.</p>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="section contact">
+    <h3 class="section-title">Kontak</h3>
+    <div class="contact-box reveal">
+      <p>Instagram: <a href="#" target="_blank">@naivest</a></p>
+      <p>WhatsApp: <a href="https://wa.me/6280000000000" target="_blank">+62 800-0000-000</a></p>
+      <button class="btn ghost" id="toTop">↑ Kembali ke atas</button>
+    </div>
+  </section>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer-header">
+      <h4>Keranjang</h4>
+      <button class="btn ghost" id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="drawer-body"></div>
+    <div class="drawer-footer">
+      <div class="total">Total: <span id="cartTotal">Rp0</span></div>
+      <a href="checkout.html" class="btn cta" id="checkoutBtn">Checkout</a>
+    </div>
+  </aside>
+
+  <div id="backdrop"></div>
+
+  <footer class="footer">
+    <p>© Naivest 2025 • Crafted with love.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Naivest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="checkout">
+  <header class="nav shadow">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <h1>Naivest</h1>
+      <small>Checkout</small>
+    </div>
+    <a href="index.html" class="btn ghost">← Kembali</a>
+  </header>
+
+  <main class="section">
+    <h3 class="section-title">Ringkasan Pesanan</h3>
+    <div id="summary" class="summary"></div>
+
+    <h3 class="section-title">Data Pemesan</h3>
+    <form id="checkoutForm" class="form">
+      <label>Nama <input required name="name" placeholder="Nama lengkap"/></label>
+      <label>No. WhatsApp <input required name="wa" placeholder="08xxxxxxxxxx"/></label>
+      <label>Alamat <textarea required name="addr" placeholder="Jalan, Kota, Kode Pos"></textarea></label>
+      <button class="btn cta" type="submit">Buat Pesanan</button>
+    </form>
+    <div id="done" class="done" hidden>
+      <h4>Pesanan berhasil dibuat 🎉</h4>
+      <p>Kami akan menghubungi kamu via WhatsApp untuk konfirmasi pembayaran & pengiriman.</p>
+      <a class="btn ghost" href="index.html">Kembali ke Beranda</a>
+    </div>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
